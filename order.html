@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Order Cake</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Order Your Cake</h1>
+
+<form id="orderForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<br><br>
+
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<br><br>
+
+<input type="text" id="cake" placeholder="Cake Name" required>
+
+<br><br>
+
+<input type="text" id="address" placeholder="Delivery Address" required>
+
+<br><br>
+
+<button type="button" onclick="sendWhatsApp()">
+Order on WhatsApp
+</button>
+
+</form>
+
+<script>
+
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value
+let phone=document.getElementById("phone").value
+let cake=document.getElementById("cake").value
+let address=document.getElementById("address").value
+
+let message="New Cake Order%0A%0A"
+message+="Name: "+name+"%0A"
+message+="Phone: "+phone+"%0A"
+message+="Cake: "+cake+"%0A"
+message+="Address: "+address
+
+let whatsapp="https://wa.me/916378467476?text="+message
+
+window.open(whatsapp,"_blank")
+
+}
+
+</script>
+
+</body>
+</html>
